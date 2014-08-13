@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< Updated upstream
 Route::get('/', function()
 {
     return View::make('hello');
@@ -20,3 +21,6 @@ Route::get('/test', function()
 {
     return "tests";
 });
+=======
+Route::get('/login', 'HomeController@index');
+>>>>>>> Stashed changes

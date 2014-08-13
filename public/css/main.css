@@ -1,0 +1,48 @@
+@import url(//fonts.googleapis.com/css?family=Nunito);
+@import url(//fonts.googleapis.com/css?family=Raleway:500);
+
+body{
+	background-color: #EEEEEE;
+}
+.start h1 {
+	position: relative;
+	top:40px;
+	font-size: 42px;	
+	font-family:'Nunito', sans-serif;
+	text-align:center;
+	color: #FF6670;
+}
+
+.start h2 {
+	position: relative;
+	top:40px;
+	font-size: 30px;	
+	font-family:'Nunito', sans-serif;
+	text-align:center;
+	color: #003333;
+}
+
+.start{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #66FFFF;
+	height: 215px;
+}
+
+.loginBox{
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 245px;
+	height: 320px;
+	width: 250px;
+	
+}
+
+.loginBox h2{
+	position: relative;
+	top:10px;
+	font-family:'Raleway', sans-serif;
+	text-align:center;
+}
