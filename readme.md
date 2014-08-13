@@ -23,7 +23,7 @@ Create your database and add its configuration data to your `.env.local.php` fil
 
 ```
 
-php artisan db:fireup
+php artisan migrate
 
 
 ```
