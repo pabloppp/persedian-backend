@@ -1,6 +1,12 @@
 ## PERSEDIAN - your smart inventory
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+![Build Status](http://img.shields.io/badge/build-failing-red.svg)-
+![Version](http://img.shields.io/badge/version-0.1a-red.svg)-
+![Dependencies](http://img.shields.io/badge/dependencies-up--to--date-yellow.svg)-
+![License](http://img.shields.io/badge/license-MIT-blue.svg)
+
+
+
 
 ## Requirements
 
