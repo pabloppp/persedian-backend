@@ -17,9 +17,9 @@ Route::get('/', function()
     return View::make('hello');
 });
 
-Route::get('/test', function()
+Route::get('/login2', function()
 {
-    return "tests";
+    return View::make('login_page');
 });
 
 Route::get('/login', 'HomeController@index');
