@@ -52,6 +52,9 @@ body{
 
 .redBody{
     background-color: #e84849;
+    background-image: url('../images/persedian_bg.png');
+    background-size: 100%;
+    background-position: center center;
 }
 
 .blueBody{
