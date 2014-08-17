@@ -8,7 +8,9 @@
 		"rtablada/package-installer": "dev-master",
 		"lucadegasperi/oauth2-server-laravel": "1.0.x",
 		"barryvdh/laravel-debugbar": "1.*",
-		"brainboxlabs/brain-socket": "v1.0.0"
+		"brainboxlabs/brain-socket": "v1.0.0",
+		"barryvdh/laravel-ide-helper": "1.*",
+        "dinesh/barcode": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -17,7 +19,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+            "app/libs"
 		]
 	},
 	"scripts": {
@@ -27,6 +30,7 @@
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize",
 			"php artisan debugbar:publish"
 		],

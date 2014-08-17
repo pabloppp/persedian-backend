@@ -124,6 +124,8 @@ return array(
 		'Rtablada\PackageInstaller\PackageInstallerServiceProvider',
 		'LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider',
 		'BrainSocket\BrainSocketServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Dinesh\Barcode\BarcodeServiceProvider'
 
 	),
 
@@ -194,6 +196,8 @@ return array(
 		'AuthorizationServer' => 'LucaDegasperi\OAuth2Server\Facades\AuthorizationServerFacade',
 		'ResourceServer' => 'LucaDegasperi\OAuth2Server\Facades\ResourceServerFacade',
 		'BrainSocket'     => 'BrainSocket\BrainSocketFacade',
+        'DNS1D' => 'Dinesh\Barcode\Facades\DNS1DFacade',
+        'DNS2D' => 'Dinesh\Barcode\Facades\DNS2DFacade',
 
 	),
 
