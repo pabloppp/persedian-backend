@@ -16,11 +16,11 @@ class CreateItemsTable extends Migration {
         {
             //FIELDS
             $table->increments('id');
-            $table->bigInteger('code');
+            $table->string('code',255);
             $table->string('name', 255);
             $table->string('description', 255);
             $table->integer('stock');
-            $table->integer('price');
+            $table->decimal('price', 13, 4);
             $table->longText('others', 255);
             $table->boolean('discontinued');
             $table->integer('inventory_id')->unsigned();
