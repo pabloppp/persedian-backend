@@ -17,10 +17,26 @@ Route::get('/', function()
     return View::make('hello');
 });
 
+//Access Routes
+
+Route::group(array('prefix' => 'access'), function()
+{
+    Route::get('/', 'HomeController@index');
+    Route::post('login', 'AccessController@doLogin');
+    Route::post('register', 'AccessController@doRegister');
+});
+
+//Test Routes
+
 Route::get('/test', function()
 {
     return "tests";
 });
 
-Route::get('/login', 'HomeController@index');
+Route::get('/barcode', function()
+{
+    $result = DNS1D::getBarcodeSVG("PRD123456", "C128B",2,100);
+    //$result = "<img  src='data:image/png;base64,".DNS1D::getBarcodePNG("Content", "C128B",2,100)."' />";
+    return $result;
 
+});

@@ -1,15 +1,16 @@
 @section('content')
 	<div class="loginBox">
-		<form class="form-signin" role="form">
+		<form action="login" method="post" class="form-signin" role="form">
 			<h2>Please, log in</h2><br>
-			<input type="email" class="form-control" placeholder="Email address" required autofocus>
+			<input name="email" type="email" class="form-control" placeholder="Email address" required autofocus>
 			<br>
-        	<input type="password" class="form-control" placeholder="Password" required>
+        	<input name="password" type="password" class="form-control" placeholder="Password" required>
         	<div class="checkbox">
           		<label>
             		<input type="checkbox" value="remember-me"> Remember me
           		</label>
        		 </div>
+       		 <button type="submit">submit</button>
 		</form>
 		
 	</div>
