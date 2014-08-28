@@ -10,7 +10,8 @@
 		"barryvdh/laravel-debugbar": "1.*",
 		"brainboxlabs/brain-socket": "v1.0.0",
 		"barryvdh/laravel-ide-helper": "1.*",
-        "dinesh/barcode": "dev-master"
+        "dinesh/barcode": "dev-master",
+        "artdarek/oauth-4-laravel": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

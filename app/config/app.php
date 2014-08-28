@@ -121,11 +121,15 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+
+        //~~~~~> Third party
+
 		'Rtablada\PackageInstaller\PackageInstallerServiceProvider',
 		'LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider',
 		'BrainSocket\BrainSocketServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-        'Dinesh\Barcode\BarcodeServiceProvider'
+        'Dinesh\Barcode\BarcodeServiceProvider',
+        'Artdarek\OAuth\OAuthServiceProvider',
 
 	),
 
@@ -193,11 +197,15 @@ return array(
 		'URL' => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View' => 'Illuminate\Support\Facades\View',
+
+        //~~~~~> Third party
+
 		'AuthorizationServer' => 'LucaDegasperi\OAuth2Server\Facades\AuthorizationServerFacade',
 		'ResourceServer' => 'LucaDegasperi\OAuth2Server\Facades\ResourceServerFacade',
 		'BrainSocket'     => 'BrainSocket\BrainSocketFacade',
         'DNS1D' => 'Dinesh\Barcode\Facades\DNS1DFacade',
         'DNS2D' => 'Dinesh\Barcode\Facades\DNS2DFacade',
+        'OAuth' => 'Artdarek\OAuth\Facade\OAuth',
 
 	),
 
