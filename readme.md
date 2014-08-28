@@ -6,12 +6,20 @@
 ![License](http://img.shields.io/badge/license-MIT-blue.svg)
 
 
-
-
 ## Requirements
 
 It needs: [composer](https://getcomposer.org/) | 
 [bower](http://bower.io/)
+
+## Dependencies
+
+- [rtablada/package-installer](https://github.com/rtablada/package-installer): Package installer for dependencies (not used very much).
+- [lucadegasperi/oauth2-server-laravel](https://github.com/lucadegasperi/oauth2-server-laravel): OAuth2 plugin for building RESTful API with OAuth authentication (not used yet).
+- [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar): Laravel debug bar.
+- [brainboxlabs/brain-socket](https://github.com/brainboxlabs/brain-socket): Websockets for Laravel (not used yet).
+- [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper): IDE helper, so PhpStorm detects Laravel specific syntax. 
+- [dinesh/barcode](https://github.com/dinesh/barcode): Barcode generator (not used yet).
+- [artdarek/oauth-4-laravel](https://github.com/artdarek/oauth-4-laravel): OAuth support for many services (Google, twitter, facebook, ...) (not used yet)
 
 ## Instalation
 Once you have cloned or forked this repo, just run:
@@ -39,7 +47,12 @@ In order to republish the debugbar assets (stored in `public/packages`) and gene
 composer update
 
 ```
+You can also create the basic OAuth tables (not yet seeded) by running this command:
 
+```
+php artisan migrate --package="lucadegasperi/oauth2-server-laravel"
+
+```
 
 ### License
 
