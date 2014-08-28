@@ -30,8 +30,8 @@ class AccessController extends Controller {
 
             // create our user data for the authentication
             $userdata = array(
-                'email' 	=> Input::get('email'),
-                'password' 	=> Input::get('password'),
+                'email' 	=> Input::json('email'),
+                'password' 	=> Input::json('password'),
                 'verified' => NULL
             );
 
@@ -76,8 +76,8 @@ class AccessController extends Controller {
 
         } else {
             $user = new User;
-            $user->email = Input::get('email');
-            $user->password = Hash::make(Input::get('password')); // If you want passwords one way hashed
+            $user->email = Input::json('email');
+            $user->password = Hash::make(Input::json('password')); // If you want passwords one way hashed
             $user->verified = str_random(100);
             $user->save();
             return Response::json(
