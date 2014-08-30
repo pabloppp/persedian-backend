@@ -33,6 +33,8 @@ Route::get('/test', function()
     return "tests";
 });
 
+Route::get('glogin', 'AccessController@loginWithGoogle');
+
 Route::get('/barcode', function()
 {
     $result = DNS1D::getBarcodeSVG("PRD123456", "C128B",2,100);
