@@ -1,0 +1,263 @@
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400);
+
+@font-face {
+    font-family: 'colored';
+    src: url('../fonts/Multicolore.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #F8F8F8;
+}
+
+
+.appInfo{		
+	margin-top: 170px;
+}
+
+.accessForm{
+	margin-top: 200px;	
+	width: 400px;
+	margin-left: 50px;
+}
+
+.smalltitle{
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 27px;
+	color:#999999;
+	font-weight: bold;
+	
+}
+
+
+.appInfo h1{
+	margin-left: 65px;
+	font-size: 40px;
+	text-align: center;
+	color: #EC5253;
+	font-family: 'colored', sans-serif;
+}
+
+.appDescription{	
+	font-size: 18px;
+	color: #999999;
+	width: 450px;
+	margin-top: 10px;
+	margin-left: 225px;
+	display: inline-block;
+	font-family: 'Lato', Calibri, Arial, sans-serif;	
+}
+
+.form-1{    
+    position: relative; /* For the submit button positioning */ 
+}
+ 
+.form-1 .field{
+    position: relative; /* For the icon positioning */
+}
+
+.form-1 .field i{
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    height: 36px;
+    width: 36px;  
+    color: #777777;
+    text-align: center;
+    line-height: 52px;
+    transition: all 0.3s ease-out;
+    
+}
+
+.form-1 .prettyInput{
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+    width: 100%;
+    padding: 10px 18px 10px 45px; 
+    border: none; 
+    box-shadow: 
+        inset 0 0 5px rgba(0,0,0,0.1),
+        inset 0 3px 2px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    background: white;
+    color: #777;
+    transition: color 0.3s ease-out;
+}
+ 
+.form-1 input[type=email] {
+    margin-bottom: 10px;
+}
+
+.form-1 input:hover ~ i {
+    color: #EC5253;
+}
+ 
+.form-1 input:focus {
+    outline: none;
+}
+
+
+
+
+.form-1 .submit {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 17px;
+    right: -35px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 2px rgba(0,0,0,0.1),
+        0 3px 2px rgba(0,0,0,0.1),
+        inset 0 -3px 2px rgba(0,0,0,0.2);
+}
+
+.form-1 button{
+	outline: none;
+}
+
+.form-1 .submitButton {   
+    width: 100%;
+    height: 100%;
+    margin-top: -1px;
+ 
+    border: none;
+    border-radius: inherit;
+    background: linear-gradient(#EC5253, #FF6666);
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        0 1px 2px rgba(0,0,0,0.35),
+        inset 0 3px 2px rgba(255,255,255,0.2),
+        inset 0 -3px 2px rgba(0,0,0,0.1);
+ 
+    cursor: pointer;
+}
+
+.form-1 button:hover,
+.form-1 button[type=submit]:focus {
+    background: #CC3333;
+    transition: all 0.3s ease-out;
+}
+ 
+.form-1 button:active {
+    background: #EC5253;
+    box-shadow: 
+        inset 0 0 5px rgba(0,0,0,0.3),
+        inset 0 3px 4px rgba(0,0,0,0.3);
+}
+
+
+.fa-arrow-right{
+	font-size: 25px;
+	color: white;
+}
+
+.fa-user{
+	font-size: 18px;
+}
+
+.fa-hand-o-right{
+	font-size: 25px;
+	color: white;
+}
+
+.fa-unlock-alt{
+	font-size: 18px;
+}
+
+.fa-thumbs-o-up{
+	font-size: 25px;
+	color: white;
+}
+
+.fa-check-circle-o{
+	font-size: 25px;
+	
+}
+
+.fa-circle-o{
+	font-size: 24px;
+	position: relative;
+
+}
+
+
+.forgotCase{
+	font-size: 16px;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #999999;
+	font-weight: bold;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	display: inline-block;
+}
+
+.forgotCase:hover{
+	color: #EC5253;
+}
+
+.stayLogged{
+	margin-top: 15px;
+	float: left;
+
+}
+
+.cb1{
+	position: relative;
+	top:15px;
+	right: 0px;
+	width: 160px !important;
+	height: 45px !important;
+	font-size: 16px;
+	border-radius: 5px 5px 5px 5px !important;	
+	border: none;
+	color: #999999;
+    
+	box-shadow: 0 1px 1px 0 #C7C7C7 inset;
+	background: none repeat scroll 0 0 #E9E9E9;
+ 
+    cursor: pointer;
+
+}
+.cb1 span{
+	position: relative;
+	top: -4px !important;
+	right: 5px;
+}
+
+#hrVert{
+display: inline-block;
+border-left: 1px solid #999999;
+height:45px;
+
+}
+
+.checking{	
+	margin-right: 15px;
+}
+
+.checkedBut{
+	position: relative;
+	top:15px;
+	width: 50px !important;
+	height: 45px !important;
+	
+	border: none;
+    border-radius: 5px 0 0 5px;
+    background: linear-gradient(#454E54, #454E54);
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        0 1px 2px rgba(0,0,0,0.35),
+        inset 0 3px 2px rgba(255,255,255,0.2),
+        inset 0 -3px 2px rgba(0,0,0,0.1);
+ 
+    cursor: pointer;
+
+}
+

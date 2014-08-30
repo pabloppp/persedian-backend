@@ -6,7 +6,7 @@
     <link href="{{ asset('bower_resources/bootstrap/dist/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('bower_resources/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('bower_resources/font-awesome-animation/dist/font-awesome-animation.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('resources/css/main.css') }}" rel="stylesheet">
 
     <script src="{{ asset('bower_resources/angular/angular.min.js') }}"></script>
 </head>

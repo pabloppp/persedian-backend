@@ -22,5 +22,8 @@ Route::get('/login2', function()
     return View::make('login_page');
 });
 
-Route::get('/login', 'HomeController@index');
+Route::get('/access', function()
+{
+    return View::make('pages/access');
+});
 
