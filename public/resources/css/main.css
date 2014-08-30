@@ -1,0 +1,234 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito);
+@import url(http://fonts.googleapis.com/css?family=Crafty+Girls);
+@import url(http://fonts.googleapis.com/css?family=Raleway:500);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
+
+body{
+    font-family: 'Oxygen', sans-serif;
+    transition: all 0.3s ease-in;
+}
+.start h1 {
+	position: relative;
+	top:40px;
+	font-size: 42px;	
+	font-family:'Nunito', sans-serif;
+	text-align:center;
+	color: #FF6670;
+}
+
+.start h2 {
+	position: relative;
+	top:40px;
+	font-size: 30px;	
+	font-family:'Nunito', sans-serif;
+	text-align:center;
+	color: #003333;
+}
+
+.start{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #66FFFF;
+	height: 215px;
+}
+
+.loginBox{
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 245px;
+	height: 320px;
+	width: 250px;
+	
+}
+
+.loginBox h2{
+	position: relative;
+	top:10px;
+	font-family:'Raleway', sans-serif;
+	text-align:center;
+}
+
+.redBody{
+    background-color: #e84849;
+    background-image: url('../images/persedian_bg.png');
+    background-size: 100%;
+    background-position: center center;
+}
+
+.blueBody{
+    background-color: #47b0ce;
+}
+
+.greenBody{
+    background-color: #49ce48;
+}
+
+.pinkBody{
+    background-color: #f3a3a3;
+}
+
+.lightblueBody{
+    background-color: #98d3e4;
+}
+
+.lightgreenBody{
+    background-color: #99e498;
+}
+
+.loginTwoZone{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginTwoZone .btn-link{
+    float: right;
+    color: rgba(0,0,0,0.4);
+}
+
+.loginTwoZone .btn-link:focus{
+    outline: none;
+}
+
+.loginTwoZone .btn-link:hover{
+    color: rgba(0,0,0,0.9);
+}
+
+.loginTwoBox{
+    font-family:'Nunito', sans-serif;
+    margin-top: 15px;
+    height: auto;
+
+    background-color: rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 1px rgba(0,0,0,0.1),
+                0 1px 1px rgba(255,255,255,0.1);
+}
+
+.loginTitle{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 85px;
+    font-size: 400%;
+    color: rgba(0,0,0,0.2);
+    font-family:'Nunito', sans-serif;
+}
+
+.inputBox{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.inputBox hr{
+ margin-bottom: 5px;
+ margin-top: 5px;
+}
+
+.inputBox .row{
+    position: relative;
+    margin: 2px 10px 2px 10px;
+    padding: 0 0 0 30px;
+}
+
+.inputBox i{
+    position: absolute;
+    width: 30px;
+    left: 0;
+    display: block;
+    top: 5px;
+    color: #dbdbdb;
+}
+
+.inputBox input{
+
+    border: none;
+    width: 100%;
+
+}
+
+.inputBox input:focus+i{
+    color: #000000;
+}
+
+.inputBox input:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.loginTwoBox button{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #e8b448;
+    color: rgba(0,0,0,0.4);
+    border: none;
+
+}
+
+.loginTwoBox button:hover{
+    background-color: #e8c748;
+    transform: scale(1.02, 1.05);
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+.loginTwoBox button:active{
+    background-color: #e8a148;
+    transform: scale(0.98, 0.95);
+    box-shadow: none;
+    outline: none;
+}
+
+.loginTwoBox button:focus{
+    outline: none;
+}
+
+.infoBody{
+     margin-top: 80px;
+     color: rgba(0,0,0,0.7);
+     text-align: center;
+ }
+
+
+.infoBody h1{
+    font-size: 600%;
+    color: #ffffff;
+    font-family: 'Crafty Girls', cursive;
+}
+
+.infoBody h2{
+    font-weight: lighter;
+    color: rgba(255,255,255,0.7);
+}
+
+.infoBody hr{
+
+    border: 2px dashed rgba(0,0,0,0.1);
+}
+
+
+.infoBody .separator{
+    display: block;
+    position: relative;
+    color: rgba(0,0,0,0.1);
+    font-size: 200%;
+    letter-spacing: 20px;
+    margin-top: 30px;
+}
+
+.infoBody h3{
+    color: rgba(0,0,0,0.5);
+}
+
+.infoBody p{
+    font-size: 18px;
+}
