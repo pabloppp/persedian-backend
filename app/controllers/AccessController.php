@@ -123,7 +123,7 @@ class AccessController extends Controller {
             $message = 'Your unique Google user id is: ' . $result['id'] . ' and your name is ' . $result['name'];
             echo $message. "<br/>";
 
-            $user = User::first(array("email" => $result['email']));
+            $user = User::where("email",$result['email'])->first();
 
             if($user == null){
                 echo "user does not exist - creating user";
