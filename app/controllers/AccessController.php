@@ -36,11 +36,11 @@ class AccessController extends Controller {
             );
 
             // attempt to do the login
-            if (Auth::attempt($userdata)) {
+            if (Auth::attempt($userdata, true)) {
 
                 //Redirect::route("/app");
-                return Response::json(
-                    "success",
+                return Response::json([
+                    'success'=>"200"],
                     200
                 );
 
@@ -57,12 +57,25 @@ class AccessController extends Controller {
         }
     }
 
+    protected function doLogout()
+    {
+        Auth::logout();
+        Redirect::route("/");
+    }
+
 
     protected function doRegister()
     {
         $rules = array(
-            'email'    => 'required|email|unique:users,email|confirmed', // make sure the email is an actual email
-            'password' => 'required|alphaNum|confirmed|min:3' // password can only be alphanumeric and has to be greater than 3 characters
+
+            //With confirmation fields
+            /*'email'    => 'required|email|unique:users,email|confirmed', // make sure the email is an actual email
+            'password' => 'required|alphaNum|confirmed|min:3' // password can only be alphanumeric and has to be greater than 3 characters*/
+
+            //Without confirmation fields
+            'email'    => 'required|email|unique:users,email', // make sure the email is an actual email
+            'password' => 'required|alphaNum|min:3' // password can only be alphanumeric and has to be greater than 3 characters
+
         );
         $validator = Validator::make(Input::all(), $rules);
 
@@ -110,12 +123,9 @@ class AccessController extends Controller {
             $message = 'Your unique Google user id is: ' . $result['id'] . ' and your name is ' . $result['name'];
             echo $message. "<br/>";
 
-            $userdata = array(
-                'email' 	=> $result['email'],
-                'password' 	=> $result['id']
-            );
+            $user = User::first(array("email" => $result['email']));
 
-            if(!Auth::attempt($userdata)){
+            if($user == null){
                 echo "user does not exist - creating user";
                 $user = new User();
                 $user->email = $result['email'];
@@ -125,12 +135,17 @@ class AccessController extends Controller {
                 $user->save();
             }
             else echo "user does exist!";
+
+            Auth::login($user, true);
+
             echo "<br>";
 
             //Var_dump
             //display whole array().
             //return Redirect::to('/');
             dd($result);
+
+
 
         }
         // if not ask for permission first

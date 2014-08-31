@@ -23,7 +23,9 @@ Route::group(array('prefix' => 'access'), function()
 {
     Route::get('/', 'HomeController@index');
     Route::post('login', 'AccessController@doLogin');
+    Route::post('logout', 'AccessController@doLogout');
     Route::post('register', 'AccessController@doRegister');
+    Route::get('google', 'AccessController@loginWithGoogle');
 });
 
 //Test Routes
@@ -32,8 +34,6 @@ Route::get('/test', function()
 {
     return "tests";
 });
-
-Route::get('glogin', 'AccessController@loginWithGoogle');
 
 Route::get('/access', function()
 {
