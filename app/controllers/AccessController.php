@@ -59,8 +59,8 @@ class AccessController extends Controller {
 
     protected function doLogout()
     {
-        Auth::logout();
-        Redirect::route("/");
+        if(!Auth::guest()) Auth::logout();
+        return Redirect::to("/");
     }
 
 
@@ -121,12 +121,11 @@ class AccessController extends Controller {
             $result = json_decode( $googleService->request( 'https://www.googleapis.com/oauth2/v1/userinfo' ), true );
 
             $message = 'Your unique Google user id is: ' . $result['id'] . ' and your name is ' . $result['name'];
-            echo $message. "<br/>";
+            //echo $message. "<br/>";
 
             $user = User::where("email",$result['email'])->first();
 
             if($user == null){
-                echo "user does not exist - creating user";
                 $user = new User();
                 $user->email = $result['email'];
                 $user->password = Hash::make($result['id']);
@@ -134,16 +133,15 @@ class AccessController extends Controller {
                 $user->avatar = $result['picture'];
                 $user->save();
             }
-            else echo "user does exist!";
 
             Auth::login($user, true);
 
-            echo "<br>";
 
+            return Redirect::to( '/i' );
             //Var_dump
             //display whole array().
             //return Redirect::to('/');
-            dd($result);
+
 
 
 

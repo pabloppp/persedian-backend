@@ -11,8 +11,9 @@ class Inventory extends Eloquent {
     use SoftDeletingTrait;
 
     protected $table = 'inventories';
-    protected $hidden = array('id','user_id', 'currency_id');
+    protected $hidden = array('id','user_id', 'currency_id', 'deleted_at');
     protected $dates = ['deleted_at'];
+    //protected $appends = array('item');
 
     public function currency()
     {
@@ -33,4 +34,5 @@ class Inventory extends Eloquent {
     {
         return $this->hasMany('Item', 'inventory_id');
     }
+
 } 

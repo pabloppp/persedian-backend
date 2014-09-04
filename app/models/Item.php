@@ -11,7 +11,7 @@ class Item extends Eloquent{
     use SoftDeletingTrait;
 
     protected $table = 'items';
-    protected $hidden = array('id');
+    protected $hidden = array('id', 'deleted_at');
     protected $dates = ['deleted_at'];
 
     public function inventory()

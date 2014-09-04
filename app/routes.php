@@ -12,35 +12,48 @@
 */
 
 
-Route::get('/', function()
-{
-    return View::make('hello');
-});
-
 //Access Routes
 
 Route::group(array('prefix' => 'access'), function()
 {
     Route::get('/', 'HomeController@index');
     Route::post('login', 'AccessController@doLogin');
-    Route::post('logout', 'AccessController@doLogout');
+    Route::get('logout', 'AccessController@doLogout');
     Route::post('register', 'AccessController@doRegister');
     Route::get('google', 'AccessController@loginWithGoogle');
 });
 
 //Test Routes
 
-Route::get('/test', function()
+Route::get('test', function()
 {
     return "tests";
 });
 
-Route::get('/access', function()
+//API Routes
+Route::group(array('prefix' => 'api', 'before' => 'auth'), function()
 {
-    return View::make('pages/access');
+    Route::get('/inventories/owned', 'InventoryController@getMine');
+    Route::get('/inventories/collaborating', 'InventoryController@getCollaborating');
+    Route::get('/inventories/{name}/delete', 'InventoryController@delete');
+    Route::post('/inventories', 'InventoryController@add');
 });
 
-Route::get('/barcode', function()
+//Navigation Routes
+
+Route::get('/', function()
+{
+    if(Auth::guest()) return View::make('pages/access');
+    return Redirect::to("i");
+
+});
+
+Route::get('i', function()
+{
+    return View::make('pages/main_app');
+})->before("auth");
+
+Route::get('barcode', function()
 {
     $result = DNS1D::getBarcodeSVG("PRD123456", "C128B",2,100);
     //$result = "<img  src='data:image/png;base64,".DNS1D::getBarcodePNG("Content", "C128B",2,100)."' />";

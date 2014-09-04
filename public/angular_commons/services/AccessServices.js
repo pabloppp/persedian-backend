@@ -4,7 +4,7 @@
 
 angular.module("common.services")
 
-.service('AccessResource', function($resource) {
+.service('AccessService', function($resource) {
 
     var result = {};
 

@@ -1,14 +1,14 @@
 
 
 angular.module('app.controllers')
-    .controller('AccessCtrl', ['$scope','AccessResource', '$timeout', '$interval',
-        function($scope, AccessResource, $timeout, $interval) {
+    .controller('AccessCtrl', ['$scope','AccessService', '$timeout', '$interval',
+        function($scope, AccessService, $timeout, $interval) {
 
-            $scope.googleSigninUrl = AccessResource.googleSigninUrl;
+            $scope.googleSigninUrl = AccessService.googleSigninUrl;
 
             $scope.doLogin = function(){
 
-                AccessResource.resource.login({"email":$scope.email, "password":$scope.password}).$promise.then(
+                AccessService.resource.login({"email":$scope.email, "password":$scope.password}).$promise.then(
                 function(result){
                     //Success
                     console.log(result);
@@ -27,7 +27,7 @@ angular.module('app.controllers')
 
             $scope.doRegister = function(){
 
-                AccessResource.resource.register({"email":$scope.email, "password":$scope.password}).$promise.then(
+                AccessService.resource.register({"email":$scope.email, "password":$scope.password}).$promise.then(
                     function(result){
                         //Success
                         console.log(result);

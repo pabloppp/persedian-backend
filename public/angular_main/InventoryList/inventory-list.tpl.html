@@ -1,0 +1,63 @@
+
+<div class="container" role="main">
+    <a class="pull-right" ng-href="{{logoutUrl}}">Logout</a>
+    <h1>Welcome back!</h1>
+
+    <h2>Inventories:</h2>
+
+    <ul class="nav nav-tabs">
+        <li ng-class="{'active' : show == 'owned'}"><a class="clk" ng-click="changeTo('owned')">Owned by me</a></li>
+        <li ng-class="{'active' : show == 'collaborating'}"><a class="clk" ng-click="changeTo('collaborating')">Collaborating</a></li>
+    </ul><br>
+
+    <div>
+    <div ng-repeat="inventory in inventories" ng-cloak>
+
+        <div>
+            <div class="panel panel-default clk clk-trans">
+                <div class="panel-heading">
+                    <h2 class="panel-title">{{inventory.name}} <small>{{inventory.count}} articles</small>
+                        <span class="pull-right">{{inventory.currency.symbol}}</span>
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    {{inventory.description}}
+                    <a ng-show="show == 'owned'" ng-click="removeInventory(inventory)" class="clk pull-right"><small>Delete</small></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="text-center" ng-show="show == 'owned'">
+        <form ng-show="adding" class="well">
+
+                <div class="row">
+
+                    <div class="col-sm-10">
+                        <input required class="form-control" ng-model="newinventory.name" type="text" placeholder="Name">
+                    </div>
+
+                    <div class="col-sm-2">
+                        <select ng-init="newinventory.currency_id = 8" class="form-control" ng-model="newinventory.currency_id">
+                            <option value="8">€ EUR</option>
+                            <option value="7">$ USD</option>
+                        </select>
+                    </div>
+
+                </div>
+                <br>
+                <textarea style="resize:none" ng-model="newinventory.description" class="form-control" placeholder="Description..." fixed></textarea>
+                <h1>
+                    <span ng-click="addInventory()" class="col-sm-8 label label-primary clk clk-trans" ng-click="">Create</span>
+                    <span ng-click="adding = false" class="col-sm-3 label label-danger clk clk-trans pull-right">Cancel</span>
+                </h1>
+            <br><br>
+
+        </form>
+        <span ng-show="error"><h3><span  ng-click="adding = true" class="label label-danger clk clk-trans col-sm-12">Error: {{error}}</span></h3><br></span>
+        <h1><span ng-hide="adding" ng-click="adding = true" class="label label-default clk clk-trans col-sm-12">+ Add Inventory</span></h1>
+    </div>
+    </div>
+
+
+</div>

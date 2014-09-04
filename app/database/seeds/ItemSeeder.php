@@ -19,9 +19,12 @@ class ItemSeeder extends Seeder{
             "name"=>"Patatas sexys",
             "description"=>"...",
             "stock"=>0,
-            "price"=>23.5,
+            "retail_price"=>23.5,
             "others"=>"",
-            "discontinued"=>false
+            "discontinued"=>false,
+            "ordered"=>0,
+            "sold"=>0,
+            "code_type"=>"none"
         ));
 
         $inventory1->items()->save($item1);
@@ -31,9 +34,12 @@ class ItemSeeder extends Seeder{
             "name"=>"Flores_silvestres",
             "description"=>"...",
             "stock"=>0,
-            "price"=>23.5,
+            "retail_price"=>23.5,
             "others"=>"",
-            "discontinued"=>false
+            "discontinued"=>false,
+            "ordered"=>0,
+            "sold"=>0,
+            "code_type"=>"none"
         ));
 
         $inventory1->items()->save($item2);
@@ -43,9 +49,12 @@ class ItemSeeder extends Seeder{
             "name"=>"Ropa vieja",
             "description"=>"...",
             "stock"=>0,
-            "price"=>23.5,
+            "retail_price"=>23.5,
             "others"=>"",
-            "discontinued"=>false
+            "discontinued"=>false,
+            "ordered"=>0,
+            "sold"=>0,
+            "code_type"=>"none"
         ));
 
         $inventory2->items()->save($item1);
